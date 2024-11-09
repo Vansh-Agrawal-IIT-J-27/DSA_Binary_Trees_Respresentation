@@ -1,8 +1,8 @@
-**Binary Tree Visualizer**
+# Binary Tree Visualizer
 
 A C++ application that provides a graphical and textual representation of binary trees using the Qt framework. This tool allows users to visualize binary tree structures, explore traversal algorithms, and interact with various tree operations in an intuitive and user-friendly manner.
 
-**Features**
+# Features
 
 i) Interactive Tree Visualization:
 
@@ -38,15 +38,15 @@ i) Zoom and Navigation:
 
 Zoom in and out for better visualization of large trees.
 
-**Technologies Used**
+# Technologies Used
 
 Programming Language: C++
 
 GUI Framework: Qt (Qt Creator IDE)
 
-Data Structures: Linked Nodes, Queues, Stacks
+Data Structures: Queues, Stacks
 
-**Installation & Setup**
+# Installation & Setup
 
 Prerequisites
 
