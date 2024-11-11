@@ -1,27 +1,32 @@
 # Binary Tree Visualizer
 
-This project is a web-based application designed to visualize various binary tree data structures and their operations. It offers a user-friendly interface to explore and understand concepts like binary search trees (BSTs), AVL trees, and Red-Black trees.
-
-## Tech Stack
-
-* **Frontend:** HTML, CSS, JavaScript
+A C++ application that provides a graphical and textual representation of binary trees using the Qt framework. This tool allows users to visualize binary tree structures, explore traversal algorithms, and interact with various tree operations in an intuitive and user-friendly manner.
 
 ## Features
+- Interactive Tree Visualization
+  - Display binary trees graphically with clear node relationships
+  - Customizable node colors, background colors, and text colors
+- File Management
+  - Load and save tree structures for later use
+  - Reset the tree to start fresh
+- Dynamic Node Operations
+  - Insert and delete nodes interactively
+  - View properties of each node
+- Traversal Algorithms
+  - Supports In-order, Pre-order, and Post-order traversals
+  - Displays traversal results for algorithm analysis
+- Properties Panel
+  - Provides tree metrics like Height, Node Count, Leaf Nodes, etc.
 
-* **Tree Visualization:**
-    * Dynamically displays the structure of binary trees.
-    * Highlights nodes and edges during traversal and operations.
-    * Provides clear visual representation of tree operations.
-* **Tree Operations:**
-    * **Insertion:** Adds nodes to the tree at appropriate positions.
-    * **Deletion:** Removes nodes from the tree while maintaining tree structure.
-    * **Search:** Finds specific nodes within the tree.
-* **Traversal Algorithms:**
-    * **In-order Traversal:** Visits nodes in ascending order.
-    * **Pre-order Traversal:** Visits the root node first, then left subtree, and then right subtree.
-    * **Post-order Traversal:** Visits left subtree, then right subtree, and then the root node.
-* **Tree Types:**
-    * **Binary Tree:** A basic tree structure with at most two children per node.
-    * **Binary Search Tree (BST):** A binary tree where nodes are arranged in a specific order.
-    * **AVL Tree:** A self-balancing BST that ensures efficient operations.
-    * **Red-Black Tree:** A self-balancing BST that guarantees logarithmic time complexity for operations.
+## Technologies Used
+
+- Programming Language: C++
+- GUI Framework: Qt (Qt Creator IDE)
+- Data Structures: Queues, Stacks
+
+## Installation & Setup
+
+Prerequisites
+
+- Qt Framework: Ensure that you have Qt installed on your system.
+- C++ Compiler: A modern C++ compiler that supports C++11 or later.
