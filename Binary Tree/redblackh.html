@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red-Black Tree</title>
+    <link rel="stylesheet" href="redblack.css">  <!-- External CSS -->
+    <style>
+        .node {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: lightgrey;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+        }
+        .node.red {
+            background-color: red;
+        }
+        .node.black {
+            background-color: black;
+        }
+        .line {
+            position: absolute;
+            height: 2px;
+            background-color: black;
+        }
+        #tree-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="controls-panel">
+            <h2>Red-Black Tree Controls</h2>
+            <input type="number" id="valueInput" placeholder="Enter value">
+            <button onclick="insertNode()">Insert Node</button>
+            <button onclick="deleteNode()">Delete Node</button>
+            
+            <br><br>
+            
+            <button onclick="showTraversal('preorder')">Show Pre-order Traversal</button>
+            <div id="preorder-result"></div>
+
+            <button onclick="showTraversal('inorder')">Show In-order Traversal</button>
+            <div id="inorder-result"></div>
+
+            <button onclick="showTraversal('postorder')">Show Post-order Traversal</button>
+            <div id="postorder-result"></div>
+        </div>
+
+        <div class="tree-visualizer">
+            <div id="tree-container"></div>
+        </div>
+    </div>
+
+    <!-- Message box for alerts -->
+    <div id="message" class="message-box">Node inserted successfully!</div>
+
+    <script src="redblack.js"></script>  <!-- JavaScript file -->
+</body>
+</html>

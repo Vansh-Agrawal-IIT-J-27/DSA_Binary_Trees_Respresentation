@@ -1,0 +1,197 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.highlight {
+    background-color: #f39c12 !important;
+}
+
+.found {
+    background-color: #e74c3c !important;
+}
+
+.tree-visualizer, .controls-panel {
+    padding: 20px;
+}
+
+/* Tree visualizer section */
+.tree-visualizer {
+    width: 60%;
+    background-color: #f9f9f9;
+    border-right: 2px solid #ddd;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+}
+
+#tree-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Styling for nodes */
+.node {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Nodes above lines */
+}
+
+
+/* Styling for lines between nodes */
+.line {
+    position: absolute;
+    width: 2px;
+    background-color: black;
+    transform-origin: 0 0;
+    z-index: 0; /* Lines below nodes */
+}
+
+
+/* Highlight for nodes during traversal or search */
+.node.highlight {
+    background-color: #ffeb3b;
+    color: #000;
+}
+
+.node.found {
+    background-color: yellow;
+    border: 2px solid orange;
+}
+
+/* Controls panel */
+.controls-panel {
+    width: 40%;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.controls-panel h2, .controls-panel h3 {
+    color: #333;
+}
+
+.controls-panel input, .controls-panel button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px 0;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.controls-panel button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Traversal result styling */
+#traversal-result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    width: 80%;
+    color: #555;
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+}
+
+.line {
+    position: absolute;
+    background-color: black;
+    height: 2px;
+}
+
+
+
+/* Notification messages */
+.message-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.message-box.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+#message {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    display: none;
+    z-index: 9999;
+    text-align: center;
+}
+
+#message.show {
+    display: block;
+}
+.back-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    background-color: #f0f0f0;
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+    position: fixed;  /* Fixed position */
+    top: 20px;        /* 20px from the top */
+    right: 20px;      /* 20px from the right */
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #ddd;
+}

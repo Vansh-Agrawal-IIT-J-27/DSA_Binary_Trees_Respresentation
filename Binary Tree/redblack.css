@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #469aad;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    border: 2px solid #852585;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tree-visualizer, .controls-panel {
+    padding: 20px;
+}
+
+.tree-visualizer {
+    width: 60%;
+    background-color: #f9f9f9;
+    border-right: 2px solid #ddd;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+}
+
+#tree-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(160, 131, 160);
+    margin-top: 20px;
+    position: relative;
+}
+
+.node {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    z-index: 1; /* Ensures nodes are above lines */
+    transform: translate(-50%, -50%); /* Center the nodes */
+}
+
+.node.red {
+    background-color: red;
+}
+
+.node.black {
+    background-color: black;
+}
+
+.line {
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    transform-origin: 0 0; /* Rotate from the starting point */
+    z-index: 0; /* Ensures lines are below nodes */
+}
+
+.node.highlight {
+    background-color: #ffeb3b;
+    color: #000;
+}
+
+.node.found {
+    background-color: yellow;
+    border: 2px solid orange;
+}
+
+.controls-panel {
+    width: 40%;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.controls-panel h2, .controls-panel h3 {
+    color: #333;
+}
+
+.controls-panel input, .controls-panel button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px 0;
+    width: 80%;
+}
+
+#traversal-result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    width: 80%;
+    color: #555;
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+}
+
+.message-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    font-size: 1.2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.message-box.show {
+    opacity: 1; /* Show the message */
+    transform: translateX(-50%) translateY(0);
+}
+
+#message {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    display: none;  /* Hidden by default */
+    z-index: 9999;
+    text-align: center;
+}
+
+#message.show {
+    display: block;
+}
+@keyframes pulseHighlight {
+    0% { background-color: #ffeb3b; }
+    50% { background-color: #ffd54f; } /* Slightly lighter yellow */
+    100% { background-color: #ffeb3b; }
+}
+
+.node.highlight {
+    animation: pulseHighlight 1s ease infinite; /* Add pulsing animation */
+    color: #000;
+}

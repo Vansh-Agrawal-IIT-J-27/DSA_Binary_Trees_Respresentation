@@ -1,0 +1,189 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #589191;
+}
+
+/* Main container for layout */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    border: 2px solid #93108f;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Tree Visualizer Section */
+.tree-visualizer {
+    width: 60%;
+    background-color: #994f9e;
+    border-right: 2px solid #ddd;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+#tree-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Node styles */
+.node {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    z-index: 1; /* Ensure nodes appear above lines */
+    transform: translate(-50%, -50%); /* Center the nodes */
+}
+
+.node.highlight {
+    background-color: yellow;
+    transition: background-color 0.3s;
+}
+
+
+.node.found {
+    background-color: yellow;
+    border: 2px solid orange; /* Optional border for visibility */
+}
+
+/* Lines connecting nodes */
+.line {
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    z-index: 0; /* Lines should be below the nodes */
+    transform-origin: 0 0; /* Rotate from the starting point */
+}
+
+/* Controls Panel Section */
+.controls-panel {
+    width: 40%;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.controls-panel h2, .controls-panel h3 {
+    color: #333;
+}
+
+.controls-panel input, .controls-panel button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px 0;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Message Box */
+.message-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    font-size: 1.2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.message-box.show {
+    opacity: 1; /* Show the message */
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Notification Message */
+#message {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    display: none;  /* Hidden by default */
+    z-index: 9999;
+    text-align: center;
+}
+
+#message.show {
+    display: block;
+}
+
+/* Traversal Result */
+#traversal-result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    width: 80%;
+    color: #555;
+    font-family: monospace;
+    font-size: 14px;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+}
+
+/* Hover effect for buttons */
+.controls-panel button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional Style for Node Deletion Animation */
+.node-deleted {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: scale(0.5);
+}
+.back-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    background-color: #abbe1c;
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+    position: fixed;  /* Fixed position */
+    top: 20px;        /* 20px from the top */
+    right: 20px;      /* 20px from the right */
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #b2bd2f;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BST Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left side: Tree animation -->
+        <div class="tree-visualizer">
+            <h2>Binary Search Tree</h2>
+            <div id="tree-container"></div>
+        </div>
+        
+        <!-- Right side: Input and traversal controls -->
+        <div class="controls-panel">
+            <h2>Controls</h2>
+            <input type="number" id="valueInput" placeholder="Enter a value" />
+            <button onclick="insertNode()">Insert</button>
+            <button onclick="deleteNode()">Delete</button>
+            <button onclick="searchNode()">Search</button>
+            <h3>Traversal Options</h3>
+            <button onclick="preOrderTraversal()">Pre-Order</button>
+            <div id="preOrderResult"></div> <!-- Placeholder for pre-order result -->
+            <button onclick="inOrderTraversal()">In-Order</button>
+            <div id="inOrderResult"></div> <!-- Placeholder for in-order result -->
+            <button onclick="postOrderTraversal()">Post-Order</button>
+            <div id="postOrderResult"></div> <!-- Placeholder for post-order result -->
+            <button onclick="resetTree()">Reset Tree</button>
+            <div id="traversal-result"></div>
+        </div>
+        <div class="message-box" id="messageBox">Node found!</div>
+        <div id="message" class="hidden"></div>
+    </div>
+    <a href="index.html" class="back-button">Back to Home Page</a>
+    <script src="bst.js"></script>
+</body>
+</html>

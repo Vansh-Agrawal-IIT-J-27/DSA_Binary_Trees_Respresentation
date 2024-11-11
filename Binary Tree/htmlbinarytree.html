@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Tree Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left side: Tree animation -->
+        <div class="tree-visualizer">
+            <h2>Binary Tree</h2>
+            <div id="tree-container"></div>
+        </div>
+        
+        <!-- Right side: Input and traversal controls -->
+        <div class="controls-panel">
+            <h2>Controls</h2>
+            <input type="number" id="valueInput" placeholder="Enter a value" />
+            <button onclick="insertNode()">Insert</button>
+            <button onclick="deleteNode()">Delete</button>
+            <button onclick="searchNode()">Search</button>
+            
+            <h3>Traversal Options</h3>
+            <button onclick="preOrderTraversal()">Pre-Order</button>
+            <div id="preOrderResult"></div>
+            <button onclick="inOrderTraversal()">In-Order</button>
+            <div id="inOrderResult"></div>
+            <button onclick="postOrderTraversal()">Post-Order</button>
+            <div id="postOrderResult"></div>
+           <!-- Replace the Clear Highlights button with Reset Tree -->
+           <button onclick="resetTree()">Reset Tree</button>
+            <div id="traversal-result"></div>
+        </div>
+        
+        <!-- Message box for notifications -->
+        <div class="message-box" id="messageBox">Node found!</div>
+        <div id="message" class="hidden"></div>
+    </div>
+    <a href="index.html" class="back-button">Back to Home Page</a>
+    <script src="binarytree.js"></script>
+</body>
+</html>

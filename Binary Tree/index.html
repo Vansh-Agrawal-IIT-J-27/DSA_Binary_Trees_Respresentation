@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Tree Type</title>
+  <style>
+    /* Set a background image of a binary tree */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('binarytreeimage.jpg'); /* Replace with your binary tree image URL */
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    /* Center the content and add spacing */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    /* Style for the heading */
+    #select-tree-heading {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Tabs container */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Style for the tab buttons */
+    .tab-button {
+      padding: 20px 40px;
+      font-size: 22px;
+      cursor: pointer;
+      border: 2px solid #fff;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      border-radius: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Hover effects for buttons */
+    .tab-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      transform: translateY(-5px);
+    }
+
+    .tab-button:focus {
+      outline: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Heading for the topic selection -->
+    <div id="select-tree-heading">
+      <h1>Select a Tree Type</h1>
+    </div>
+
+    <!-- Buttons for tree selection -->
+    <div class="tabs">
+      <button class="tab-button" onclick="loadTree('htmlbinarytree.html')">Binary Tree</button>
+      <button class="tab-button" onclick="loadTree('htmlbst.html')">BST Tree</button>
+      <button class="tab-button" onclick="loadTree('htmlavl.html')">AVL Tree</button>
+      <button class="tab-button" onclick="loadTree('redblackh.html')">RED BLACK TREE</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to load the selected tree HTML file and hide the heading
+    function loadTree(fileName) {
+      // Hide the selection heading after making a choice
+      document.getElementById('select-tree-heading').style.display = 'none';
+      
+      // Open the selected tree visualization file in a new tab
+      window.location.href = fileName;
+    }
+  </script>
+
+</body>
+</html>
