@@ -25,9 +25,3 @@ This project is a web-based application designed to visualize various binary tre
     * **Binary Search Tree (BST):** A binary tree where nodes are arranged in a specific order.
     * **AVL Tree:** A self-balancing BST that ensures efficient operations.
     * **Red-Black Tree:** A self-balancing BST that guarantees logarithmic time complexity for operations.
-
-## How to Use
-
-**Clone the Repository:**
-   ```bash
-   git clone [https://github.com/your-username/binary-tree-visualizer.git](https://github.com/your-username/binary-tree-visualizer.git)
